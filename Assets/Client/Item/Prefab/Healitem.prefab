@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8788509420648639077}
   - component: {fileID: 4653142704610103955}
+  - component: {fileID: 1286119849830168295}
   m_Layer: 0
   m_Name: Healitem
   m_TagString: Untagged
@@ -54,6 +55,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1286119849830168295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530766610860984435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2a6dcd8e6165347b0c8bf4e3179cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
 --- !u!1 &3223672417869620107
 GameObject:
   m_ObjectHideFlags: 0
