@@ -12,7 +12,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private Rigidbody rb = null;
     private MainCamera mainCamera = null;
-    private Gun gun = null;
+    private Gun[] guns = null;
     private MeshRenderer meshRenderer = null;
     private Color originalColor = default;
 
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour, IDamageable
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = GetComponentInChildren<MainCamera>();
-        gun = GetComponentInChildren<Gun>();
+        guns = GetComponentsInChildren<Gun>();
         meshRenderer = GetComponentInChildren<MeshRenderer>();
         
         hp = maxHp;
@@ -47,8 +47,11 @@ public class Player : MonoBehaviour, IDamageable
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // 총을 발사
-            gun.Attack();
+            // 들고 있는 모든 총을 발사
+            foreach (Gun gun in guns)
+            {
+                gun.Attack();
+            }
         }
     }
     private void HandleCursor()
