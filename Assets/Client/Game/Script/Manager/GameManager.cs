@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     private Player _player = null;
     private EnemyManager _enemyManager = null;
     private UIManager _uiManager = null;
+    private ItemManager _itemManager = null;
     private UI_Title _uiTitle = null;
     [SerializeField] private int score = 0;
     
@@ -14,7 +15,8 @@ public class GameManager : MonoBehaviour
         _player = GetComponentInChildren<Player>();
         _enemyManager = GetComponentInChildren<EnemyManager>();
         _uiManager = GetComponentInChildren<UIManager>();
-        
+        _itemManager = GetComponentInChildren<ItemManager>();
+
     }
 
     private void Start()
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
         _player.Init(OnGameOver);
         _enemyManager.Init(_player, AddScore);
         _uiManager.Init();
+        _itemManager.Init();
     }
 
     private void ClearGame()

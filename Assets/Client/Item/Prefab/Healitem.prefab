@@ -49,7 +49,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2a6dcd8e6165347b0c8bf4e3179cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  healAmount: 30
+  rotateSpeed: 90
 --- !u!1 &3223672417869620107
 GameObject:
   m_ObjectHideFlags: 0
